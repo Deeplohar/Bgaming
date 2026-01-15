@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - Requests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="global.css"> 
+    <link rel="stylesheet" href="admin.css"> 
+    
+</head>
+<body>
+    <div class="main-content">
+        <div class="box admin-box">
+            <h2>Admin Panel</h2>
+            <p style="text-align: center; color: #555;">Logged in as: <strong id="adminUserEmail">Loading...</strong></p>
+            
+            <hr>
+
+            <h3>🟡 Pending Deposit Requests</h3>
+            <ul id="depositRequestsList" class="request-list">
+                </ul>
+            
+            <h3>🔵 Pending Withdrawal Requests</h3>
+            <ul id="withdrawalRequestsList" class="request-list">
+                </ul>
+            
+            <div id="noRequests">No pending requests found.</div>
+            
+            <button id="adminLogoutBtn">Log Out</button>
+
+        </div>
+    </div>
+
+    <div id="paymentModalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <h4>Confirm Withdrawal Payment</h4>
+            <p>You need to send the payment to the user's UPI ID.</p>
+            
+            <p>Amount to send: <strong><span id="modalAmount"></span> Coins (₹)</strong></p>
+            <p>User UPI ID: <strong><span id="modalUpiId"></span></strong></p>
+            <p style="font-size: 12px; color: #666;">Request ID: <span id="modalRequestId"></span></p>
+            
+            <hr style="margin: 15px 0;">
+
+            <p style="font-size: 14px; font-weight: bold; color: #00796b;">Step 1: Click button to open your payment app:</p>
+
+            <div class="payment-apps">
+                <a href="#" id="phonepeLink" class="payment-app-btn" target="_blank">📱 Pay with PhonePe</a>
+                <a href="#" id="googlepayLink" class="payment-app-btn" target="_blank">💳 Pay with Google Pay</a>
+                <a href="#" id="paytmLink" class="payment-app-btn" target="_blank">🔵 Pay with Paytm</a>
+                <a href="#" id="otherUpiLink" class="payment-app-btn" target="_blank">🌐 Other UPI App Link</a> 
+            </div>
+            
+            <hr style="margin: 20px 0;">
+            
+            <p style="font-weight: bold; color: #d32f2f;">Step 2: AFTER payment is successful, click CONFIRM:</p>
+            <button id="finalConfirmBtn" class="approve-btn" style="width: 100%; margin-top: 10px; padding: 12px;">✅ I Have Sent the Payment (Final Confirmation)</button>
+            <button id="cancelModalBtn" class="reject-btn" style="width: 100%; margin-top: 10px;">Cancel / Close</button>
+        </div>
+    </div>
+    
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="admin-logic.js"></script>
+</body>
+</html>

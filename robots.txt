@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /*.js$
+Disallow: /*.css$
+
+Sitemap: https://balajigaming-318c7.web.app/sitemap.xml

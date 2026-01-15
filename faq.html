@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Number Game | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to common questions about Number Game. Deposits, withdrawals, game rules, and troubleshooting.">
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .faq-item {
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 15px;
+            background: #f8f9ff;
+            display: none;
+        }
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .expanded .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="login-body">
+    <div class="container login-container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 style="margin: 0;">Frequently Asked Questions</h2>
+            <button onclick="window.location.href='index.html'" 
+                    style="background: #6c757d; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                ← Back to Login
+            </button>
+        </div>
+        
+        <div class="faq-container">
+            <!-- Game Play FAQs -->
+            <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">🎮 Game Play</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I play Number Game?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    1. Login with Google/Email<br>
+                    2. Go to Game Page<br>
+                    3. Select numbers 0-9<br>
+                    4. Enter bet amount<br>
+                    5. Wait for round results<br>
+                    6. Win 10x if number matches!
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How often are results declared?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Results are declared every 5 minutes. The timer is visible on the game page.
+                </div>
+            </div>
+            
+            <!-- Deposit FAQs -->
+            <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px; margin-top: 30px;">💰 Deposits</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How can I deposit coins?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    1. Go to Wallet page<br>
+                    2. Click "Deposit"<br>
+                    3. Enter amount<br>
+                    4. Pay via UPI (any app)<br>
+                    5. Enter UTR number<br>
+                    6. Submit request<br>
+                    Coins added after admin approval (usually 1-2 hours).
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What payment methods are accepted?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    • Any UPI app (PhonePe, Google Pay, Paytm)<br>
+                    • All banks supporting UPI<br>
+                    • Minimum deposit: ₹10
+                </div>
+            </div>
+            
+            <!-- Withdrawal FAQs -->
+            <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px; margin-top: 30px;">💸 Withdrawals</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How to withdraw my winnings?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    1. Go to Wallet page<br>
+                    2. Click "Withdraw"<br>
+                    3. Enter UPI ID<br>
+                    4. Enter amount<br>
+                    5. Confirm withdrawal<br>
+                    Money sent within 24 hours.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What is the minimum withdrawal?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Minimum withdrawal: 10 coins (₹10)<br>
+                    Maximum withdrawal: No limit
+                </div>
+            </div>
+            
+            <!-- Technical FAQs -->
+            <h3 style="color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px; margin-top: 30px;">🔧 Technical</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    I forgot my password. What to do?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    On login page, click "Forgot Password". Enter your email to receive reset link.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Game is not loading. What should I do?
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    1. Refresh the page (Ctrl+F5)<br>
+                    2. Clear browser cache<br>
+                    3. Try incognito mode<br>
+                    4. Contact support if issue persists
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div style="background: #e7f3ff; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <h3 style="color: #007bff; margin-top: 0;">Still have questions?</h3>
+                <p>Contact our support team:</p>
+                <p>📧 Email: support@balajigaming.com<br>
+                ⏰ Response Time: Within 6 hours</p>
+            </div>
+            
+            <button onclick="window.location.href='index.html'" 
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px; border-radius: 8px; width: 100%; margin-top: 20px; font-size: 16px; font-weight: bold; cursor: pointer;">
+                🎮 Start Playing Now
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        function toggleFAQ(element) {
+            const item = element.parentElement;
+            const answer = element.nextElementSibling;
+            const arrow = element.querySelector('.arrow');
+            
+            item.classList.toggle('expanded');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+        
+        // Open first FAQ by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstFAQ = document.querySelector('.faq-question');
+            if (firstFAQ) {
+                toggleFAQ(firstFAQ);
+            }
+        });
+    </script>
+</body>
+</html>

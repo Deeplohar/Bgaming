@@ -1,0 +1,100 @@
+/* global.css - Styles used across multiple pages (welcome, payment, admin, etc.) */
+
+/* --- 1. CORE LAYOUT AND FONT --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(#ffffff); /* Light Blue Gradient */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    min-height: 100vh;
+}
+
+/* This class centers the content on most pages (welcome, payment, admin) */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- 2. COMMON BOX/CONTAINER STYLE --- */
+.box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15), 0 4px 8px rgba(0,0,0,0.08); 
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+}
+
+/* --- 3. COMMON HEADERS AND DIVIDERS --- */
+h2 { 
+    color: #00796b; /* Teal color for main headings */
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #00796b; 
+    margin: 15px 0 5px;
+    font-size: 1.1em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* --- 4. COMMON BUTTON STYLE (e.g., Go Back button, Play button) --- */
+.play {
+    padding: 14px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    background: #4caf50; /* Green */
+    color: #fff;
+}
+.play:hover:not(:disabled) {
+    background: #388e3c;
+    transform: translateY(-1px);
+}
+.play:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+}
+
+
+/* --- 5. COMMON INPUT STYLE (Used in payment and login/signup) --- */
+.payment-input {
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* --- MOBILE ADJUSTMENTS (Common to most pages) --- */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px; 
+    }
+    .box {
+        padding: 15px; 
+        box-shadow: none; 
+        max-width: 100%; 
+    }
+}

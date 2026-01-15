@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 🔥 UPDATED SEO TAGS -->
+    <title>Number Game - Play & Win Coins | Real Money Gaming</title>
+    <meta name="description" content="Play number prediction game online. Bet on numbers 0-9 and win 10x coins. Instant UPI withdrawals. Join now!">
+    <meta name="keywords" content="number game, win money online, prediction game, UPI gaming, earn money, online betting">
+    <meta name="author" content="Balaji Gaming">
+    <link rel="stylesheet" href="global.css"> 
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body class="login-body">
+    <div class="container login-container">
+        <h2>Login or Sign Up</h2>
+        
+        <p id="errorMsg"></p>
+
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            
+            <button type="submit">Log In</button>
+            <button type="button" id="signupBtn">Sign Up</button> 
+            
+            <button type="button" id="googleLoginBtn">Google से लॉगिन करें</button>
+            
+            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+        </form>
+        
+        <!-- 🔥 NEW FOOTER -->
+        <div style="margin-top:30px; padding-top:15px; border-top:1px solid #ddd; font-size:12px; color:#666;">
+            <p>
+                <a href="about.html" style="color:#007bff; margin:0 5px;">About</a> | 
+                <a href="#" style="color:#007bff; margin:0 5px;">Contact</a> | 
+                <a href="#" style="color:#007bff; margin:0 5px;">Terms</a>
+            </p>
+            <p>© 2024 Balaji Gaming...</p>
+        </div>
+    </div>
+
+    <script type="module" src="./firebase.js"></script> 
+    <script type="module" src="./index.js"></script>
+    
+    <!-- 🔥 CACHE BUSTER -->
+    <script>
+        // Force clear cache
+        if (performance.navigation.type === 1) {
+            console.log("Page was reloaded");
+            localStorage.setItem('lastReload', Date.now());
+        }
+        
+        // Version parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has('v')) {
+            window.location.search = '?v=' + Date.now();
+        }
+    </script>
+</body>
+</html>
